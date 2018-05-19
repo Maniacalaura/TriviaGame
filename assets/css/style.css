@@ -54,6 +54,10 @@ form {
     text-underline-position: under;
 }
 
+#results {
+    font-size: 60px;
+}
+
 #submit {
     display: block;
     margin-left: auto;
