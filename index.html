@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homework 5 Trivia Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"><link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="title">Disneyland Trivia!</h1>
+          <p class="lead">How much do you know about the Happiest Place on Earth?</p>
+        </div>
+        <hr>
+    </div>
+    <div class="pointer">
+    <form name="qForm" onsubmit="return submitAnswers()">
+      <div id="qoneChoices">
+        <p id="q1">What was the name of the treehouse in Adventureland, before it became Tarzan's Treehouse?</p>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q1" id="inlineRadio1" value="a">The Jungle Book Treehouse
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q1" id="inlineRadio2" value="b">
+          Swiss Family Treehouse
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q1" id="inlineRadio3" value="c">
+          Robin Hood's Treehouse
+        </div> 
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q1" id="inlineRadio3" value="d">
+          Mickey's Treehouse
+        </div> 
+      </div>
+      <br>
+      <br>
+      <div id="twoChoices">
+        <p id="q2">In what year did the Indiana Jones ride open?</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q2" id="inlineRadio1" value="a">
+            1984
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q2" id="inlineRadio2" value="b">
+            1989
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q2" id="inlineRadio3" value="c">
+            1991
+          </div> 
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q2" id="inlineRadio3" value="d">
+            1995
+          </div> 
+      </div>
+      <br>
+      <br>
+      <div id="qthreeChoices">
+        <p id="q3">Where is the only place in the park you can legally purchase and consume alcohol?</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q3" id="inlineRadio1" value="a">
+            The Cove Bar
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q3" id="inlineRadio2" value="b">
+            UVA Bar
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q3" id="inlineRadio3" value="c">
+            Club 33
+          </div> 
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q3" id="inlineRadio3" value="d">
+            The Blue Bayou
+          </div> 
+      </div>
+      <br>
+      <br>
+      <div id="qfourChoices">
+        <p id="q4">The Matterhorn attraction is one of the most popular rides at the park but also contains a secret hiding within its walls. What is in the mountain?</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q4" id="inlineRadio1" value="a">
+            A Secret Hotel Suite
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q4" id="inlineRadio2" value="b">
+            Old Ride Parts
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q4" id="inlineRadio3" value="c">
+            A Basketball Court
+          </div> 
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q4" id="inlineRadio3" value="d">
+            An Arcade
+          </div> 
+      </div>
+      <br>
+      <br>
+      <div id="qfiveChoices">
+        <p id="q5">Which of the following rides changes every year from Halloween to Christmas?</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q5" id="inlineRadio1" value="a">
+            It's a Small World
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q5" id="inlineRadio2" value="b">
+            The Matterhorn
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q5" id="inlineRadio3" value="c">
+            Big Thunder Railroad
+          </div> 
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q5" id="inlineRadio3" value="d">
+            The Haunted Mansion
+          </div> 
+      </div>
+      <br>
+      <br>
+      <div id="qsixChoices">
+        <p id="q6">Which US President was present on Opening Day in 1955?</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q6" id="inlineRadio1" value="a">
+            Dwight D. Eisenhower
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q6" id="inlineRadio2" value="b">
+            Lyndon B. Johnson
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q6" id="inlineRadio3" value="c">
+            Ronald Reagan
+          </div> 
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q6" id="inlineRadio3" value="d">
+            Bill Clinton
+          </div> 
+      </div>
+      <br>
+      <br>
+      <div id="qsevenChoices">
+        <p id="q7">What is the tallest structure in Disneyland?</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q7" id="inlineRadio1" value="a">
+            Space Mountain
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q7" id="inlineRadio2" value="b">
+            Splash Mountain
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q7" id="inlineRadio3" value="c">
+            The Matterhorn
+          </div> 
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q7" id="inlineRadio3" value="d">
+            Sleeping Beauty's Castle
+          </div> 
+      </div>
+      <br>
+      <br>
+      <div id="qeightChoices">
+        <p id="q8">This now abandoned Tomorrowland Attaction, formerly the People Mover, was re-engineerd into this ill-fated, short-lived ride:</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q8" id="inlineRadio1" value="a">
+            Flying Saucers
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q8" id="inlineRadio2" value="b">
+            Rocket Rods
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q8" id="inlineRadio3" value="c">
+            Circarama, U.S.A.
+          </div> 
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="q8" id="inlineRadio3" value="c">
+            Mission to Mars
+        </div> 
+      </div>
+      <p id="results"></p>
+        <input type="image" id="submit" src="assets/images/MickeyHead.png" height="100" width="130">
+    </form>
+  </div>
+    <div class="footer">
+          Homework 5 Trivia Game Laura Smith
+      </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
