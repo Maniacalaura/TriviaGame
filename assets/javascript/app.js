@@ -1,14 +1,14 @@
-var count = 60;
+var count = 10;
 var counter=setInterval(timer, 1000); 
 
 function timer()
 {
     count=count-1;
-    if(count <= 0)
-    {
-    clearInterval(counter);
-    return;
-    }
+        if(count == 0)
+        {
+        clearInterval(counter);
+        alert("You Lose!")
+        }
     document.getElementById("timer").innerHTML = "<h1> Time Left: " +count+ "</h1>";
 }
 
